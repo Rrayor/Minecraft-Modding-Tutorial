@@ -12,11 +12,11 @@ import net.rrayor.tutorial.item.TutorialItems;
  */
 public final class ItemRenderRegister {
 
+    @SideOnly(Side.CLIENT)
     public static void registerItemRenderer(){
         reg(TutorialItems.tutorialItem);
     }
 
-    @SideOnly(Side.CLIENT)
     public static void reg(Item item){
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getUnlocalizedName().substring(item.getUnlocalizedName().indexOf('.') + 1),"Inventory"));
     }

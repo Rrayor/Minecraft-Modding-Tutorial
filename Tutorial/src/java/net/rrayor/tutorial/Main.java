@@ -7,6 +7,8 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.rrayor.tutorial.block.TutorialBlocks;
+import net.rrayor.tutorial.client.render.block.BlockRenderRegister;
 import net.rrayor.tutorial.client.render.item.ItemRenderRegister;
 import net.rrayor.tutorial.item.TutorialItems;
 import net.rrayor.tutorial.proxy.IProxy;
@@ -28,10 +30,12 @@ public class Main {
     @EventHandler
     public void preInit(FMLPreInitializationEvent e){
         TutorialItems.init();
+        TutorialBlocks.init();
     }
     @EventHandler
     public void init(FMLInitializationEvent e){
         ItemRenderRegister.registerItemRenderer();
+        BlockRenderRegister.registerBlockRenderer();
     }
 
     @EventHandler
