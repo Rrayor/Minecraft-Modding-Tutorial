@@ -1,0 +1,6 @@
+{
+  "parent" : "tutorial:item/basicItem",
+  "textures" : {
+    "layer0" : "tutorial:items/tutorialItem"
+  }
+}
